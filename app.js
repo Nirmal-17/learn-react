@@ -1,27 +1,23 @@
-//functions in js
-function multiply(a,b){
-    return (a*b);
-}
-let res=multiply(8,7);
-console.log("product: " + res)
-//ARROW FUNCTION
-const multiply1=(a,b)=>
-    (a*b);
-
-console.log(multiply1(8,7));
-//functions
-const fruits=["mango","apple","banana"];
-console.log(fruits);
-console.log(fruits[0]);
-console.log(fruits[1]);
-console.log(fruits[2]);
-//map vs forEach
-const numbers=[1,2,3,4,5];
-numbers.forEach(number=>{
-    console.log(number*2);
+const students=[
+    {name:"nirmal", age:22, marks:45},
+    {name:"nirmala", age:21, marks:55},
+    {name:"nims", age:2, marks:95}
+];
+//forEach
+students.forEach(student=>{
+    console.log(student.name);
 });
-//map()
-const numb=[1,2,3,4,5];
-const result = numb.map(numbs=>numbs*2);
-console.log(result);
-//filter()
+//filter
+const passed=students.filter(student=>student.marks >= 45);
+console.log(passed);
+//map
+const studentNames = students.map(student => student.name);
+console.log(studentNames);
+//filter+map
+const adultNames= students.filter(student=>student.age>=18)
+.map(student=>student.name);
+console.log(adultNames);
+//top
+const topstd= students.filter(student=>student.marks >= 80)
+.map(student=>student.name);
+console.log("topper is:" + topstd);
