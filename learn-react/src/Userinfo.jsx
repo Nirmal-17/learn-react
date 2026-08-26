@@ -4,6 +4,7 @@ function UserInfo(props){
                     <p>Id:{props.id}</p>
                     <p>Name: {props.name}</p>
                     <p>Role: {props.role}</p>
+                    <p>age:{props.age}</p>
                     </div>
             );
         };
