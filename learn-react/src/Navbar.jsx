@@ -1,59 +1,77 @@
 import { Link } from "react-router-dom";
+import { FaUser, FaShoppingCart } from "react-icons/fa";
 
 function Navbar() {
     return (
         <nav
             style={{
                 display: "flex",
-                justifyContent: "space-between",
                 alignItems: "center",
+                justifyContent: "space-between",
                 padding: "15px 30px",
-                backgroundColor: "#222",
+                backgroundColor: "#c12d2d",
                 color: "white"
             }}
         >
-            {/* Logo */}
+
+            {/* LOGO */}
+
             <h2>ShopZone</h2>
 
-            {/* Navigation */}
-            <div style={{ display: "flex", gap: "25px" }}>
+
+            {/* NAVIGATION */}
+
+            <div
+                style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "25px"
+                }}
+            >
+
+                {/* HOME */}
+
                 <Link
                     to="/dashboard"
-                    style={{ color: "white", textDecoration: "none" }}
+                    style={{
+                        color: "white",
+                        textDecoration: "none"
+                    }}
                 >
                     Home
                 </Link>
 
-                <Link
-                    to="/products"
-                    style={{ color: "white", textDecoration: "none" }}
-                >
-                    Products
-                </Link>
 
-                <Link
-                    to="/categories"
-                    style={{ color: "white", textDecoration: "none" }}
-                >
-                    Categories
-                </Link>
+                {/* CART ICON */}
 
                 <Link
                     to="/cart"
-                    style={{ color: "white", textDecoration: "none" }}
+                    style={{
+                        color: "white",
+                        textDecoration: "none"
+                    }}
                 >
-                    🛒 Cart
+                    <FaShoppingCart size={20} />
                 </Link>
+
+
+                {/* PROFILE ICON */}
 
                 <Link
                     to="/profile"
-                    style={{ color: "white", textDecoration: "none" }}
+                    style={{
+                        color: "white",
+                        textDecoration: "none"
+                    }}
                 >
-                    Profile
+                    <FaUser size={20} />
                 </Link>
+
             </div>
+
         </nav>
     );
 }
 
 export default Navbar;
+
